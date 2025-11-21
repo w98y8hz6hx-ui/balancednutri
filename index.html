@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalancedNutri - Clinical Dietitian</title>
+    <meta name="description" content="Build a healthy lifestyle without restrictions. Expert clinical dietitian specializing in meal plans, gut health, PCOS, diabetes, and weight management.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/UI/style.css">
+
+<!-- JavaScript -->
+<script src="/UI/main.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <a href="#home" class="logo-section" id="logoBtn">
+            <div class="logo-text">
+                <h1 lang-ar="أخصائية التغذية حلا" lang-en="Nutritionist Hala">أخصائية التغذية حلا</h1>
+                <p>BalancedNutri</p>
+            </div>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234a9d6f'/%3E%3Ctext x='50' y='60' font-size='50' font-weight='bold' fill='white' text-anchor='middle'%3EBN%3C/text%3E%3C/svg%3E" alt="BalancedNutri" class="logo-image">
+        </a>
+        
+        <nav id="navMenu">
+            <button onclick="scrollToSection('home')" lang-ar="الرئيسية" lang-en="Home">الرئيسية</button>
+            <button onclick="scrollToSection('services')" lang-ar="الخدمات" lang-en="Services">الخدمات</button>
+            <button onclick="scrollToSection('about')" lang-ar="عن حلا" lang-en="About Hala">عن حلا</button>
+            <button onclick="scrollToSection('contact')" lang-ar="اتصل بنا" lang-en="Contact">اتصل بنا</button>
+        </nav>
+
+        <div class="header-right">
+            <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">EN</button>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home" style="background-image: linear-gradient(135deg, rgba(42, 125, 79, 0.85) 0%, rgba(74, 157, 111, 0.85) 100%), url('/UI/images/healthy_nutrition_hero_image.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="hero-content">
+        <h2 lang-ar="نبني معك نمط حياة صحي — بدون قيود" lang-en="We help you build a healthy lifestyle — without restrictions">نبني معك نمط حياة صحي — بدون قيود</h2>
+        <p lang-ar="من قبل أخصائية التغذية حلا | أخصائية تغذية علاجية" lang-en="By Nutritionist Hala | Clinical Dietitian">من قبل أخصائية التغذية حلا | أخصائية تغذية علاجية</p>
+        <button class="cta-button" onclick="scrollToSection('contact')" lang-ar="تواصل معنا" lang-en="Contact Us">تواصل معنا</button>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2 lang-ar="خدماتنا" lang-en="Our Services">خدماتنا</h2>
+    <p class="subtitle" lang-ar="رعاية غذائية شاملة مصممة خصيصاً لاحتياجاتك" lang-en="Comprehensive nutrition care tailored to your needs">رعاية غذائية شاملة مصممة خصيصاً لاحتياجاتك</p>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-header">
+                <h3 lang-ar="خطط الوجبات" lang-en="Meal Plans">خطط الوجبات</h3>
+                <div class="service-icon">🍽️</div>
+            </div>
+            <p lang-ar="خطط تغذية مخصصة مصممة لنمط حياتك وتفضيلاتك وأهدافك الصحية." lang-en="Customized nutrition plans designed for your lifestyle, preferences, and health goals.">خطط تغذية مخصصة مصممة لنمط حياتك وتفضيلاتك وأهدافك الصحية.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-header">
+                <h3 lang-ar="صحة الجهاز الهضمي" lang-en="Gut Health">صحة الجهاز الهضمي</h3>
+                <div class="service-icon">🌿</div>
+            </div>
+            <p lang-ar="تحسين صحة الجهاز الهضمي من خلال استراتيجيات تغذية قائمة على الأدلة." lang-en="Improve digestive wellness through evidence-based nutrition strategies.">تحسين صحة الجهاز الهضمي من خلال استراتيجيات تغذية قائمة على الأدلة.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-header">
+                <h3 lang-ar="إدارة متلازمة المبيض" lang-en="PCOS Management">إدارة متلازمة المبيض</h3>
+                <div class="service-icon">⚖️</div>
+            </div>
+            <p lang-ar="دعم غذائي متخصص لتوازن الهرمونات وتخفيف الأعراض." lang-en="Specialized nutrition support for hormonal balance and symptom relief.">دعم غذائي متخصص لتوازن الهرمونات وتخفيف الأعراض.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-header">
+                <h3 lang-ar="رعاية مرضى السكري" lang-en="Diabetes Care">رعاية مرضى السكري</h3>
+                <div class="service-icon">💊</div>
+            </div>
+            <p lang-ar="إدارة سكر الدم من خلال نهج غذائي شخصي." lang-en="Blood sugar management through personalized dietary approaches.">إدارة سكر الدم من خلال نهج غذائي شخصي.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="/images/logo.jpeg" alt="Nutritionist Hala">
+            <div class="experience-badge">
+                <div class="number">1+</div>
+                <div class="label" lang-ar="سنوات خبرة" lang-en="Years Experience">سنوات خبرة</div>
+            </div>
+        </div>
+        <div class="about-content">
+            <h3 lang-ar="تعرف على أخصائية التغذية حلا" lang-en="Meet Nutritionist Hala">تعرف على أخصائية التغذية حلا</h3>
+            <p class="subtitle" lang-ar="أخصائية تغذية علاجية ومتخصصة في إدارة الوزن" lang-en="Clinical Dietitian & Weight Management Specialist">أخصائية تغذية علاجية ومتخصصة في إدارة الوزن</p>
+            <p lang-ar="مع سنوات من الخبرة السريرية والشغف بمساعدة الناس على تحقيق أهدافهم الصحية، تقدم أخصائية التغذية حلا رعاية غذائية شخصية قائمة على الأدلة. يركز نهجها على بناء عادات صحية مستدامة دون قيود صارمة، مما يجعل الصحة في متناول الجميع." lang-en="With years of clinical experience and a passion for helping people achieve their health goals, Nutritionist Hala provides evidence-based, personalized nutrition care. Her approach focuses on building sustainable healthy habits without strict restrictions, making wellness achievable for everyone.">مع سنوات من الخبرة السريرية والشغف بمساعدة الناس على تحقيق أهدافهم الصحية، تقدم أخصائية التغذية حلا رعاية غذائية شخصية قائمة على الأدلة. يركز نهجها على بناء عادات صحية مستدامة دون قيود صارمة، مما يجعل الصحة في متناول الجميع.</p>
+            <div class="badges">
+                <span class="badge">
+                    <span lang-ar="أخصائية تغذية سريرية معتمدة" lang-en="Certified Clinical Dietitian">أخصائية تغذية علاجية معتمدة</span>
+                    <span>📜</span>
+                </span> 
+                <!-- <span class="badge">
+                    <span lang-ar="خبيرة في إدارة الوزن" lang-en="Weight Management Expert">خبيرة في إدارة الوزن</span>
+                    <span>🎯</span>
+                </span> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <h2 lang-ar="قصص النجاح" lang-en="Success Stories">قصص النجاح</h2>
+    <p class="subtitle" lang-ar="نتائج حقيقية من أشخاص حقيقيين" lang-en="Real results from real people">نتائج حقيقية من أشخاص حقيقيين</p>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div style="font-size: 20px;">❝</div>
+                <div class="testimonial-icon">📉</div>
+            </div>
+            <p class="testimonial-text" lang-ar="ساعدتني حلا على فقدان 15 كيلوغرام بطريقة صحية ومستدامة. شعرت بتحسن كبير في مستويات الطاقة والصحة العامة." lang-en="Hala helped me lose 15 kg in a healthy and sustainable way. I felt a significant improvement in my energy levels and overall health.">ساعدتني حلا على فقدان 15 كيلوغرام بطريقة صحية ومستدامة. شعرت بتحسن كبير في مستويات الطاقة والصحة العامة.</p>
+            <div class="testimonial-footer">
+                <p class="testimonial-name" lang-ar="فاطمة محمد" lang-en="Fatima Muhammad">فاطمة محمد</p>
+                <span class="result-badge" lang-ar="فقدان 15 كغ" lang-en="Lost 15 kg">فقدان 15 كغ</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div style="font-size: 20px;">❝</div>
+                <div class="testimonial-icon">❤️</div>
+            </div>
+            <p class="testimonial-text" lang-ar="تحسنت أعراض متلازمة المبيض لدي بشكل ملحوظ. نصائح حلا ساعدتني على استعادة توازن الهرمونات." lang-en="My PCOS symptoms improved significantly. Hala's advice helped me restore hormonal balance.">تحسنت أعراض متلازمة المبيض لدي بشكل ملحوظ. نصائح حلا ساعدتني على استعادة توازن الهرمونات.</p>
+            <div class="testimonial-footer">
+                <p class="testimonial-name" lang-ar="سارة علي" lang-en="Sarah Ali">سارة علي</p>
+                <span class="result-badge" lang-ar="تحسن صحي شامل" lang-en="Overall health improvement">تحسن صحي شامل</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div style="font-size: 20px;">❝</div>
+                <div class="testimonial-icon">💪</div>
+            </div>
+            <p class="testimonial-text" lang-ar="لم أشعر أبداً بأن الأكل الصحي صعب. خطة حلا الشخصية جعلت كل شيء سهلاً وممتعاً." lang-en="I never felt that healthy eating was difficult. Hala's personalized plan made everything easy and enjoyable.">لم أشعر أبداً بأن الأكل الصحي صعب. خطة حلا الشخصية جعلت كل شيء سهلاً وممتعاً.</p>
+            <div class="testimonial-footer">
+                <p class="testimonial-name" lang-ar="أحمد سليم" lang-en="Ahmed Salim">أحمد سليم</p>
+                <span class="result-badge" lang-ar="تغيير نمط الحياة" lang-en="Lifestyle change">تغيير نمط الحياة</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section id="stats">
+    <h2 lang-ar="إحصائيات وتأثيرنا" lang-en="Our Impact & Statistics">إحصائيات وتأثيرنا</h2>
+    <p class="subtitle" lang-ar="ننفخر بثقة عملائنا وإنجازاتهم" lang-en="We're proud of our clients' trust and achievements">ننفخر بثقة عملائنا وإنجازاتهم</p>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-number" id="visitorCount">150</div>
+            <div class="stat-label" lang-ar="زوار الموقع" lang-en="Website Visitors">زوار الموقع</div>
+            <div class="stat-description" lang-ar="عدد الزوار الذين استكشفوا خدماتنا" lang-en="People who discovered our services">عدد الزوار الذين استكشفوا خدماتنا</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">💬</div>
+            <div class="stat-number" id="consultationCount">13</div>
+            <div class="stat-label" lang-ar="استشارات تغذية" lang-en="Consultations">استشارات تغذية</div>
+            <div class="stat-description" lang-ar="جلسات تشاور شخصية نُفذت بنجاح" lang-en="Personal consultation sessions completed">جلسات تشاور شخصية نُفذت بنجاح</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">😊</div>
+            <div class="stat-number" id="clientCount">11</div>
+            <div class="stat-label" lang-ar="عملاء سعداء" lang-en="Happy Clients">عملاء سعداء</div>
+            <div class="stat-description" lang-ar="أشخاص حققوا أهدافهم الصحية" lang-en="People who achieved their health goals">أشخاص حققوا أهدافهم الصحية</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-number">88%</div>
+            <div class="stat-label" lang-ar="معدل الرضا" lang-en="Satisfaction Rate">معدل الرضا</div>
+            <div class="stat-description" lang-ar="نسبة العملاء الراضين عن الخدمة" lang-en="Clients satisfied with our service">نسبة العملاء الراضين عن الخدمة</div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 lang-ar="هل أنت مستعد لبدء رحلتك؟" lang-en="Ready to Start Your Journey?">هل أنت مستعد لبدء رحلتك؟</h2>
+    <p class="subtitle" lang-ar="تواصل معنا عبر إنستغرام للحصول على استشارة تغذية شخصية" lang-en="Contact us via Instagram for personalized nutrition consultation">تواصل معنا عبر إنستغرام للحصول على استشارة تغذية شخصية</p>
+    <a href="https://www.instagram.com/dt.hala_by" target="_blank" class="instagram-button" lang-ar="راسلنا على إنستغرام" lang-en="Message on Instagram">راسلنا على إنستغرام</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3 lang-ar="الخدمات" lang-en="Services">الخدمات</h3>
+            <button onclick="scrollToSection('services')" lang-ar="خطط الوجبات" lang-en="Meal Plans">خطط الوجبات</button>
+            <button onclick="scrollToSection('services')" lang-ar="صحة الجهاز الهضمي" lang-en="Gut Health">صحة الجهاز الهضمي</button>
+        </div>
+        <div>
+            <h3 lang-ar="المعلومات" lang-en="Information">المعلومات</h3>
+            <button onclick="scrollToSection('about')" lang-ar="عن حلا" lang-en="About Hala">عن حلا</button>
+            <button onclick="scrollToSection('contact')" lang-ar="اتصل بنا" lang-en="Contact">اتصل بنا</button>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p lang-ar="© 2025 BalancedNutri. جميع الحقوق محفوظة." lang-en="© 2025 YTWC. All rights reserved.">© 2025 YTWC. جميع الحقوق محفوظة.</p>
+        <p lang-ar="نصائح تغذية احترافية. النتائج الفردية قد تختلف." lang-en="Professional nutrition advice. Individual results may vary.">نصائح تغذية احترافية. النتائج الفردية قد تختلف.</p>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

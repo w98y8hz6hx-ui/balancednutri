@@ -1,4 +1,4 @@
- * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -415,6 +415,7 @@
             gap: 12px;
             margin-top: 20px;
         }
+        
 
         html[lang="ar"] .badges {
             justify-content: flex-end;
@@ -751,3 +752,4 @@
         section h2, section .subtitle, .service-card, .testimonial-card {
             animation: fadeInUp 0.6s ease-out;
         }
+    

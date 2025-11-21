@@ -5,17 +5,17 @@
         // Get or initialize visitor count
         let visitorCount = localStorage.getItem('balancednutri_visitors');
         if (!visitorCount) {
-            visitorCount = 1240;
+            visitorCount = 150;
         } else {
             visitorCount = parseInt(visitorCount) + 1;
         }
         localStorage.setItem('balancednutri_visitors', visitorCount);
         
         // Get or initialize consultation count
-        let consultationCount = localStorage.getItem('balancednutri_consultations') || 450;
+        let consultationCount = localStorage.getItem('balancednutri_consultations') || 13;
         
         // Get or initialize client count
-        let clientCount = localStorage.getItem('balancednutri_clients') || 380;
+        let clientCount = localStorage.getItem('balancednutri_clients') || 11;
         
         // Display stats with number formatting
         const visitorCountEl = document.getElementById('visitorCount');
@@ -36,13 +36,13 @@
     // Track user interactions
     function trackInteraction(type) {
         if (type === 'consultation') {
-            let count = localStorage.getItem('balancednutri_consultations') || 450;
+            let count = localStorage.getItem('balancednutri_consultations') || 150;
             count = parseInt(count) + 1;
             localStorage.setItem('balancednutri_consultations', count);
             const el = document.getElementById('consultationCount');
             if (el) el.textContent = count.toLocaleString();
         } else if (type === 'client') {
-            let count = localStorage.getItem('balancednutri_clients') || 380;
+            let count = localStorage.getItem('balancednutri_clients') || 13;
             count = parseInt(count) + 1;
             localStorage.setItem('balancednutri_clients', count);
             const el = document.getElementById('clientCount');

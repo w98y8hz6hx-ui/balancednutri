@@ -3,7 +3,7 @@ let currentLang = "ar";
 // Load visitor count from Edge Config API
 async function loadVisitorCount() {
     try {
-        const res = await fetch("/api/visitors/update");
+        const res = await fetch("route.js");
         const data = await res.json();
 
         if (data.success) {
@@ -107,4 +107,5 @@ function scrollToSection(sectionId) {
 // Init
 window.addEventListener("load", initializeStats);
 document.addEventListener("DOMContentLoaded", initializeStats);
+
 

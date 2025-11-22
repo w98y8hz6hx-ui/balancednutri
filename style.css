@@ -1,4 +1,4 @@
- * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -739,6 +739,236 @@
             transform: translateY(-2px);
         }
 
+        /* Client Notes Section */
+        #notes {
+            background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%),
+                        url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Cdefs%3E%3ClinearGradient id=%22notesGrad%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22rgba(74,157,111,0.05)%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22rgba(74,157,111,0)%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x=%2250%22 y=%2250%22 width=%22200%22 height=%22200%22 fill=%22url(%23notesGrad)%22 rx=%2220%22/%3E%3C/svg%3E');
+            background-position: center;
+        }
+
+        .notes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .notes-form {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: 'Cairo', 'Inter', sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 157, 111, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        html[lang="ar"] .form-actions {
+            justify-content: flex-start;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4a9d6f 0%, #2a7d4f 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 157, 111, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e8dfc8;
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: #f5b5b5;
+            color: #c41e1e;
+            font-size: 12px;
+            padding: 8px 12px;
+        }
+
+        .btn-danger:hover {
+            background: #e89999;
+        }
+
+        .notes-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        html[lang="ar"] .notes-header {
+            flex-direction: row-reverse;
+        }
+
+        .notes-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .note-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbfa 100%);
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(74, 157, 111, 0.08);
+        }
+
+        .note-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4a9d6f 0%, #2a7d4f 100%);
+        }
+
+        .note-card:hover {
+            box-shadow: 0 15px 40px rgba(74, 157, 111, 0.2);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .note-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            gap: 15px;
+        }
+
+        html[lang="ar"] .note-header {
+            flex-direction: row-reverse;
+        }
+
+        .note-client-info {
+            flex: 1;
+        }
+
+        .note-client-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 18px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .note-client-name::before {
+            content: '👤';
+            font-size: 20px;
+        }
+
+        .note-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .note-date::before {
+            content: '📅';
+        }
+
+        .note-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            white-space: pre-wrap;
+            word-break: break-word;
+            padding: 15px;
+            background: rgba(74, 157, 111, 0.04);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            font-size: 14px;
+        }
+
+        .note-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        html[lang="ar"] .note-actions {
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
@@ -868,3 +1098,4 @@
         section h2, section .subtitle, .service-card, .testimonial-card {
             animation: fadeInUp 0.6s ease-out;
         }
+   

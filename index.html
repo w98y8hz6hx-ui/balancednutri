@@ -157,36 +157,7 @@
         </div>
     </div>
 </section>
-<section id="notes" class="section-padding">
-    <div class="section-content notes-container">
-        <h2 lang-ar="ملاحظات العملاء" lang-en="Client Notes">ملاحظات العملاء</h2>
-        <p class="section-subtitle" lang-ar="إدارة وتتبع ملاحظات العملاء مع إمكانية تصديرها إلى Excel" lang-en="Manage and track client notes with Excel export capability">إدارة وتتبع ملاحظات العملاء مع إمكانية تصديرها إلى Excel</p>
 
-        <div class="notes-form">
-            <h3 lang-ar="أضف ملاحظة جديدة" lang-en="Add New Note">أضف ملاحظة جديدة</h3>
-            <form id="notesForm" onsubmit="addNote(event)">
-                <div class="form-group">
-                    <label for="clientName" lang-ar="اسم العميل" lang-en="Client Name">اسم العميل</label>
-                    <input type="text" id="clientName" name="clientName" placeholder="Enter client name" required>
-                </div>
-                <div class="form-group">
-                    <label for="noteContent" lang-ar="الملاحظة" lang-en="Note">الملاحظة</label>
-                    <textarea id="noteContent" name="noteContent" placeholder="Enter note content" required></textarea>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary" lang-ar="أضف الملاحظة" lang-en="Add Note">أضف الملاحظة</button>
-                </div>
-            </form>
-        </div>
-
-        <div class="notes-header">
-            <h3 lang-ar="الملاحظات المحفوظة" lang-en="Saved Notes">الملاحظات المحفوظة</h3>
-            <span id="notesCount" style="color: var(--primary); font-weight: 600;"></span>
-        </div>
-
-        <div class="notes-list" id="notesList"></div>
-    </div>
-</section>
 
 <!-- Contact Section -->
 <section class="contact" id="contact">
@@ -219,6 +190,7 @@
 
 </body>
 </html>
+
 
 
 
